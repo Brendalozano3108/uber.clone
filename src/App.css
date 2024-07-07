@@ -1,0 +1,16 @@
+
+ @media (max-width:1316px){
+  .padre{
+    height: 100%;
+    width:100%;
+    background-color: black;
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+    .carta1{
+      width: 100%;
+      background-color: black;
+    }
+  }
+} 
