@@ -13,23 +13,26 @@ import x from "../assets/img/x.png";
 import you from "../assets/img/you.png";
 import inn from "../assets/img/inn.png";
 import inst from "../assets/img/inst.png";
+import { Link } from 'react-router-dom';
+
 
 export const Home = () => {
+
   return (
     <>
-      <div className='bg-black w-full flex flex-col padre'>
-        <div >
+      <div className='bg-black w-full gap-3 flex flex-col padre'>
+
+        <div className="" >
           <Barra />
         </div>
-        <div className='carta1 bg-black mt-[6%] flex flex-row'>
+        <div className='carta1 bg-black mt-[6%] flex flex-row relative'>
           <div className=' bg-black ml-5 flex flex-col mt-[10%]'>
             <img className='w-[100%]' src={uber1} alt="" />
             <p className='text-white ml-[13%] mt-3'>Pide un viaje, súbete al vehículo y relájate.</p>
             <div className='flex flex-col mt-2 ml-[9%]'>
               <input type="text" placeholder='Ingresa Ubicación' className='p-3 ml-[5%] mr-[20%] rounded-lg' />
               <input type="text" placeholder='Ingresa Destino' className='p-3 ml-[5%] mr-[20%] rounded-lg mt-3' />
-              <button  className='bg-gray-200 font-serif rounded-lg p-2
-              ml-5 mt-2 mr-[75%] '>Ver Precios</button>
+              <Link className=" prec rounded text-black mt-4 px-5 py-3 text-sm  bg-slate-200 font-serif w-[25vh] ml-6 text-center" to={"/precios"}><b>Ver Precios</b></Link>
             </div>
           </div>
           <div>
@@ -46,7 +49,7 @@ export const Home = () => {
               <p className='mt-[5%] ml-[20%] text-left'>Genera ganancias en tu propio tiempo con entregas, viajes o ambos. Puedes usar tu propio auto u optar por un vehículo de renta a través de la app de Uber</p>
             </div>
             <div className=' ml-[23%] flex text-center gap-[2%] mt-5'>
-              <button className='bg-black rounded-md text-white p-3 px-6'>Comenzar</button>
+              <Link className='bg-black rounded-md text-white p-3 px-6' to={"/profile"}><b>Comenzar</b></Link>
               <button className=''><u>¿Ya tienes una cuenta? Inicia Sesión</u></button>
             </div>
           </div>
@@ -58,7 +61,8 @@ export const Home = () => {
               <p className='mt-[5%] ml-[5%] mr-[20%]'>Uber para Empresas es una plataforma con la que las empresas de todos los tamaños pueden gestionar viajes y comidas globales, así como entregas locales.</p>
             </div>
             <div className=' mt-3 ml-[9%]'>
-              <button className='bg-black rounded-md text-white p-3 px-6'>Comenzar</button>
+              <Link className='bg-black rounded-md text-white p-3 px-6' to={"/profile"}><b>Comenzar</b></Link>
+
               <button className='ml-4'><u>Conoce nuestras soluciones</u></button>
             </div>
           </div>
@@ -128,6 +132,8 @@ export const Home = () => {
             <a href="https://www.instagram.com/uber/?uclick_id=5c843252-8ed4-4df4-87df-22b6c6b3d028"><img className='w-[20px] rounded-lg' src={inst} alt="" /></a>
 
           </div>
+        </div>
+        <div>
         </div>
       </div>
     </>
