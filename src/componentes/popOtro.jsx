@@ -1,9 +1,23 @@
+import { Popbuscar } from "./popBuscar"
+import { useState } from "react";
+
+
 export const Popotro = ({ }) => {
+
+    const [chof, setChof] = useState(false);
+    const uno = () => {
+        setChof(true);
+    };
+    const dos = () => {
+        setChof(false);
+    }
+
     
     return (
         <>
             <div className="bg-white w-[100%] h-[100vh] flex flex-col
              justify-center items-center overflow-hidden backdrop-blur-sm  z-10 rounded-lg  absolute">
+                {chof && <Popbuscar dos={dos} />}
                 <div className="flex flex-col gap-3">
                 <h1><b>Nuevo pasajero</b></h1>
                 <input className="bg-slate-200 rounded-lg p-2" type="text" placeholder="Nombre"/>
@@ -15,7 +29,7 @@ export const Popotro = ({ }) => {
                 <p className="font-normal text-gray-500 text-sm">
                     Al pulsar “Añadir pasajero”, confirmas que tu amigo ha aceptado compartir su información de contacto con Uber y recibir SMS sobre este viaje.
                 </p>
-                <button className="bg-black rounded-lg text-white font-normal p-2">Añadir pasajero</button>
+                <button onClick={uno} className="bg-black rounded-lg text-white font-normal p-2">Añadir pasajero</button>
                 </div>
                 
             </div>

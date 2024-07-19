@@ -1,5 +1,5 @@
 import React from "react";
-import {GoogleMap, useJsApiLoader  } from "@react-google-maps/api";
+import {GoogleMap } from "@react-google-maps/api";
 
 const Map = (props)=>{
     return (
